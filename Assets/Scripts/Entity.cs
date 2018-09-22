@@ -19,10 +19,13 @@ public class Entity
 
     public static void ExecuteActionOnInteract(GameObject obj)
     {
+        Debug.Log(obj);
+
         if (obj == null)
             return;
 
         Component[] hits = obj.GetComponents(typeof(IInteract));
+
         if (hits.Length == 0)
             return;
 
