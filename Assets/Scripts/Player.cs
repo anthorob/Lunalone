@@ -8,17 +8,29 @@ public class Player : MonoBehaviour
 {
     private Direction direction;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-	    if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.W))
+            direction = Direction.UP;
+
+	    if (Input.GetKeyDown(KeyCode.S))
+	        direction = Direction.DOWN;
+
+	    if (Input.GetKeyDown(KeyCode.A))
+	        direction = Direction.LEFT;
+
+	    if (Input.GetKeyDown(KeyCode.D))
+	        direction = Direction.RIGHT;
+
+        if (Input.GetKeyDown(KeyCode.E))
 	    {
-            Entity.ExecuteActionOnInteract(Entity.GetObjectAtSpecifiedDirection(transform, Direction.RIGHT));
+            Entity.ExecuteActionOnInteract(Entity.GetObjectAtSpecifiedDirection(transform, direction));
             
 	    }
 	}

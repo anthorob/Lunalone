@@ -1,0 +1,8 @@
+[title=welcome_start]
+Bienvenue dans le jeu Lunalone!
+sdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[title=welcome_end]
+
+[title=npc1_start]
+Lorem Ipsum Dolor sit amet
+[title=npc1_end]

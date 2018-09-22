@@ -13,7 +13,14 @@ public class PlayerMovement : MonoBehaviour {
 		body = GetComponent<Rigidbody2D>();
 	}
 
-	public void FixedUpdate() {
+	public void FixedUpdate()
+	{
+        HandleMouvement();
+        
+    }
+
+    private void HandleMouvement()
+    {
         //Check if player is moving 
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
