@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
     public Animator animator;
 
-	private Rigidbody2D body;
-
-	void Start () {
+    private Rigidbody2D body;
+    private SpriteRenderer sprite;
+    private Transform gun;
+    void Start () {
 		body = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        gun = transform.GetChild(0);
 	}
 
 	public void FixedUpdate() {
@@ -23,6 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 
         if (isMovingX || isMovingY)
         {
+            animator.SetLayerWeight(0, 0);
+            animator.SetLayerWeight(1, 1);
             Vector2 movement = new Vector2(0, 0);
 
             if (xInput > 0) // Left up/down movement
@@ -49,16 +54,27 @@ public class PlayerMovement : MonoBehaviour {
                     movement.Set(-1, -.5f);
             }
 
-            if (yInput > 0 && xInput == 0)
-            { movement.Set(0, 1); animator.SetFloat("SpeedX", 0); animator.SetFloat("SpeedY", yInput); }
-            if (yInput < 0 && xInput == 0)
-            { movement.Set(0, -1); animator.SetFloat("SpeedX", 0); animator.SetFloat("SpeedY", yInput); }
+            if (yInput > 0 && xInput == 0) // UP
+            {
+                movement.Set(0, 1);
+                animator.SetFloat("SpeedX", 0);
+                animator.SetFloat("SpeedY", yInput);
+            }
+            if (yInput < 0 && xInput == 0) // Down
+            {
+                movement.Set(0, -1);
+                animator.Play("Player_MoveDown");
+                animator.SetFloat("SpeedX", 0);
+                animator.SetFloat("SpeedY", yInput);
+            }
 
             //Movement
             body.MovePosition(new Vector2((transform.position.x + movement.x * speed * Time.deltaTime), (transform.position.y + movement.y * speed * Time.deltaTime)));
         }
         else
         {
+            animator.SetLayerWeight(0, 1);
+            animator.SetLayerWeight(1, 0);
             animator.SetFloat("SpeedY", yInput);
             animator.SetFloat("SpeedX", xInput);
         }

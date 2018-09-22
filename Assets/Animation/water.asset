@@ -11,6 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d746e0082aaaaf0458b2b02bb4d45a47, type: 3}
   m_Name: water
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: 21300246, guid: 066dce0f58ffbf44cb7c02684c544105, type: 3}
   m_DefaultColliderType: 0
-  m_TilingRules: []
+  m_TilingRules:
+  - m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 21300248, guid: 066dce0f58ffbf44cb7c02684c544105, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 2
+    m_ColliderType: 0

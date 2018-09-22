@@ -826,7 +826,7 @@ public class TimelinePlayableWizard : EditorWindow
         if (GUILayout.Button("Add", GUILayout.Width(40f)))
             standardBlendPlayableProperties.Add(new UsableProperty(m_TrackBindingProperties[0]));
 
-        if (standardBlendPlayableProperties.Any(x => Attribute.IsDefined(x.propertyInfo, typeof(ObsoleteAttribute))))
+        if (standardBlendPlayableProperties.Any(x => System.Attribute.IsDefined(x.propertyInfo, typeof(ObsoleteAttribute))))
             EditorGUILayout.HelpBox ("One or more of your chosen properties are marked 'Obsolete'.  Consider changing them to avoid deprecation with future versions of Unity.", MessageType.Warning);
 
         EditorGUILayout.EndVertical ();
