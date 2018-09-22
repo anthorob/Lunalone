@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IInteract
+public class EqSlotProps : MonoBehaviour
 {
-    bool IsInteractable();
-    void TryInteract();
+    public GearMainType GearType;
 }
