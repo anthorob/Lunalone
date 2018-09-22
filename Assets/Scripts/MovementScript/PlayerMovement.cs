@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour {
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
 
-        bool isMovingX = xInput < 0.5;
-        bool isMovingY = yInput < 0.5;
+        bool isMovingX = Mathf.Abs(xInput) > 0.5;
+        bool isMovingY = Mathf.Abs(yInput) > 0.5;
 
         if (isMovingX || isMovingY)
         {
