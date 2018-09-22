@@ -247,35 +247,27 @@
      <Compile Include="Assets\2DGamekit\Utilities\DefaultPlayables\Video\VideoScriptPlayableTrack.cs" />
      <Compile Include="Assets\2DGamekit\Utilities\Standard Assets\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
      <Compile Include="Assets\2DGamekit\Utilities\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+     <Compile Include="Assets\Scripts\Interface\IInteract.cs" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Debug\Waveform.compute" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Uber.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\NormalMappedSprite-Animated.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\CopyStd.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Bloom.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Fonts\Anton OFL.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\xRLib.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\API\PSSL.hlsl" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\AutoExposure.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Debug\Vectorscope.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
      <None Include="Assets\2DGamekit\Utilities\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Colors.hlsl" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
@@ -284,38 +276,30 @@
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\API\D3D12.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\API\OpenGL.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\Particle Standard Unlit.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
      <None Include="Assets\2DGamekit\Utilities\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\ACES.hlsl" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Fonts\Oswald-Bold - OFL.txt" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\Shield.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\StdLib.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\2d misc\LICENSE.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Fog.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\Water.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\UnityStandardParticleShadow.cginc" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\Shaders\UnityStandardParticles.cginc" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
-     <None Include="Assets\2DGamekit\Utilities\TextMesh Pro\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\2d misc\CREDIT.txt" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\API\D3D9.hlsl" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <None Include="Assets\2DGamekit\Utilities\PostProcessing\Shaders\Debug\Overlays.shader" />
@@ -338,14 +322,8 @@
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>G:/Lunalone/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -550,9 +528,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Anthony/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-1.0.55.2017.2.0b12">
- <HintPath>G:/Lunalone/Assets/2DGamekit/Utilities/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.2.0b12.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>

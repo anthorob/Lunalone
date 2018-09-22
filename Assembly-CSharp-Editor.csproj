@@ -130,14 +130,8 @@
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>G:/Lunalone/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>G:/Lunalone/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -402,12 +396,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Anthony/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-1.0.55.2017.2.0b12">
- <HintPath>G:/Lunalone/Assets/2DGamekit/Utilities/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.2.0b12.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-1.0.55.2017.2.0b12-Editor">
- <HintPath>G:/Lunalone/Assets/2DGamekit/Utilities/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.2017.2.0b12-Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
