@@ -8,11 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
 
     private Rigidbody2D body;
-    private SpriteRenderer sprite;
     private Transform gun;
     void Start () {
 		body = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
         gun = transform.GetChild(0);
 	}
 
@@ -63,7 +61,6 @@ public class PlayerMovement : MonoBehaviour {
             if (yInput < 0 && xInput == 0) // Down
             {
                 movement.Set(0, -1);
-                animator.Play("Player_MoveDown");
                 animator.SetFloat("SpeedX", 0);
                 animator.SetFloat("SpeedY", yInput);
             }
