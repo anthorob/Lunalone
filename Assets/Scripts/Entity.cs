@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Scripts.Interface;
+using Unity.Collections;
 using UnityEngine;
 
 public class Entity
@@ -23,6 +24,7 @@ public class Entity
         if (obj == null)
             return;
 
+        Debug.Log("Collided with " + obj.name);
         IInteract[] interacts = obj.GetComponents<IInteract>();
 
         if (interacts.Length == 0)

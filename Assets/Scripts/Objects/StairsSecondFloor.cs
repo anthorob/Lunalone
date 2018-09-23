@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StarterHouse : MonoBehaviour, IInteract {
+public class StairsSecondFloor : MonoBehaviour, IInteract {
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +23,6 @@ public class StarterHouse : MonoBehaviour, IInteract {
     public void TryInteract()
     {
         SceneManager.LoadScene("loading", LoadSceneMode.Single);
-        SceneManager.LoadScene("interieur-maison", LoadSceneMode.Single);
-
-        
+        SceneManager.LoadScene("sous-sol", LoadSceneMode.Single);
     }
 }
