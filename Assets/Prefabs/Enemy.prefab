@@ -101,11 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 5
   target: {fileID: 4458899618864552, guid: 1a04a1a1796dfb34a876b3a1bded072c, type: 2}
-  projectile: {fileID: 1968218368309944, guid: c6999813db625674b845a54a72cfa43e, type: 2}
+  projectile: {fileID: 1963359959617496, guid: 00e9c399e2de4e3458a087d25ade49d0, type: 2}
   speed: 3
   rotationSpeed: 2
   attack1Range: 6.5
-  timeBetweenAttacks: 0
+  timeToFire: 5
 --- !u!212 &212101804633071780
 SpriteRenderer:
   m_ObjectHideFlags: 1

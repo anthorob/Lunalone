@@ -25,6 +25,7 @@ public class Projectile : MonoBehaviour {
             collider.gameObject.GetComponent<EnemyController>().Health -= 1;
             collider.gameObject.GetComponent<EnemyController>().CheckDeath();
             Destroy(gameObject);
+            Debug.Log("coollll");
         }
     }
 }
