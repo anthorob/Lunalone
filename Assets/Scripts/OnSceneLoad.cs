@@ -16,6 +16,7 @@ public class OnSceneLoad : MonoBehaviour {
 	    }
 	    else
 	    {
+            Cursor.SetCursor();
 	        Debug.Log("Blondin");
             Instantiate(Resources.Load("blondin"));
         }
