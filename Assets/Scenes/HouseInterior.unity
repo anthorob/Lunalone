@@ -14649,7 +14649,7 @@ GameObject:
   - component: {fileID: 1401926971}
   - component: {fileID: 1401926970}
   - component: {fileID: 1401926974}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

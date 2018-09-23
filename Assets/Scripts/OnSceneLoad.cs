@@ -12,16 +12,27 @@ public class OnSceneLoad : MonoBehaviour {
 	    if (StaticVariables.CowboyChapeau)
 	    {
             Debug.Log("Chapeau");
-	        Instantiate(Resources.Load<GameObject>("Player"));
+	        Instantiate(Resources.Load("Player"));
 	    }
 	    else
 	    {
 	        Debug.Log("Blondin");
-            Instantiate(Resources.Load<GameObject>("blondin"));
+            Instantiate(Resources.Load("blondin"));
         }
 
 	    gameObject.AddComponent<CameraController>().entity = GameObject.FindGameObjectWithTag("Player");
-        GameObject.Find("weapon_gun").GetComponent<Weapon>().FireRate = StaticVariables.WeaponDamage;
+
+	    if (StaticVariables.CoffreSousSolOuvert)
+	    {
+	        GameObject obj = GameObject.Find("rockfirstlvl");
+	        if (obj != null)
+	        {
+                Destroy(obj);
+	        }
+	    }
+
+        if (StaticVariables.CowboyChapeau)
+            GameObject.Find("Gun").GetComponent<Weapon>().FireRate = StaticVariables.WeaponDamage;
     }
 	
     
