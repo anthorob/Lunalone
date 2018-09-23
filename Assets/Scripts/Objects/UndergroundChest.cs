@@ -29,12 +29,10 @@ public class UndergroundChest : MonoBehaviour, IInteract
         {
             Vector2 position = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-            GameObject.Find("Main Camera").GetComponent<CameraController>().entity = null;
-            Destroy(GameObject.Find("Main Camera").GetComponent<CameraController>());
             Destroy(GameObject.FindGameObjectWithTag("Player"));
             Instantiate(Resources.Load("Player"));
             StaticVariables.CowboyChapeau = true;
-            Invoke("AddCameraControllerBack", 3);
+            RecenterCameraToPlayer();
 
             talk.NewTalk("car_change_s", "car_change_e");
 
@@ -47,9 +45,10 @@ public class UndergroundChest : MonoBehaviour, IInteract
 
     }
 
-    private void AddCameraControllerBack()
+    void RecenterCameraToPlayer()
     {
-        GameObject.Find("Main Camera").AddComponent<CameraController>().entity = GameObject.FindGameObjectWithTag("Player");
+        Vector3 pos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        gameObject.GetComponent<Camera>().transform.position = new Vector3(pos.x, pos.y, -10);
     }
 
 }
