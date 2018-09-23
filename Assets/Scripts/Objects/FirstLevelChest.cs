@@ -6,6 +6,7 @@ using UnityEngine;
 public class FirstLevelChest : MonoBehaviour, IInteract, ITalk
 {
     private bool isTalking = false;
+    private bool alreadyTaken = false;
     private RPGTalk talk;
     private Animator anim;
 
@@ -16,14 +17,18 @@ public class FirstLevelChest : MonoBehaviour, IInteract, ITalk
 
     public void TryInteract()
     {
-        Weapon w = GameObject.Find("weapon_gun").GetComponent<Weapon>();
-        w.FireRate = 5;
+        if (!alreadyTaken)
+        {
+            Weapon w = GameObject.Find("weapon_gun").GetComponent<Weapon>();
+            w.FireRate = 5;
 
-        Debug.Log("ChestInteract");
-        anim.SetBool("doChestOpening", true);
-        Invoke("StopAnim", 1f);
-        StartTalking();
-        
+            Debug.Log("ChestInteract");
+            anim.SetBool("doChestOpening", true);
+            Invoke("StopAnim", 1f);
+            StartTalking();
+
+            alreadyTaken = true;
+        }
     }
 
     private void StopAnim()

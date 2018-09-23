@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StarterHouse : MonoBehaviour, IInteract {
 
@@ -21,6 +23,7 @@ public class StarterHouse : MonoBehaviour, IInteract {
 
     public void TryInteract()
     {
-        Debug.Log("Enter house");
+        SceneManager.LoadScene("interieur-maison", LoadSceneMode.Single);
+        
     }
 }
