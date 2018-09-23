@@ -11,6 +11,7 @@ namespace Assets.Scripts
         public static bool CoffreSousSolOuvert { get; set; }
         public static bool CowboyChapeau { get; set; }
         public static int WeaponDamage { get; set; }
-
+        public static bool FirstGame { get; set; }
+        public static bool FirstWaveCompleted { get; set; }
     }
 }

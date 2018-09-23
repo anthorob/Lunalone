@@ -19,7 +19,7 @@ public class FirstLevelChest : MonoBehaviour, IInteract, ITalk
     {
         if (!alreadyTaken)
         {
-            Weapon w = GameObject.Find("weapon_gun").GetComponent<Weapon>();
+            Weapon w = GameObject.Find("Gun").GetComponent<Weapon>();
             w.FireRate = StaticVariables.WeaponDamage = 5;
 
             StartTalking();
