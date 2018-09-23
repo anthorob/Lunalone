@@ -1,0 +1,8 @@
+[title=flevel_start]
+Votre arme a été améliorée!
+Elle est maintenant rendu automatique!
+[title=flevel_end]
+
+[title=sign1_s]
+Vers la prochaine ville
+[title=sign1_e]

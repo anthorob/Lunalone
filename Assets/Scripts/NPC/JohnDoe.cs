@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Interface;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class JohnDoe : MonoBehaviour, IInteract {
+public class JohnDoe : MonoBehaviour, IInteract, ITalk
+{
+
+    private RPGTalk talk;
+
     public bool IsInteractable()
     {
         return true;
@@ -11,16 +12,26 @@ public class JohnDoe : MonoBehaviour, IInteract {
 
     public void TryInteract()
     {
-        throw new System.NotImplementedException();
+        talk.NewTalk("npc1_start", "npc1_end");
     }
 
     // Use this for initialization
     void Start () {
-		
-	}
+        talk = GameObject.FindGameObjectWithTag("rpgtalk").GetComponent<RPGTalk>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void StartTalking()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void StopTalking()
+    {
+        throw new System.NotImplementedException();
+    }
 }
