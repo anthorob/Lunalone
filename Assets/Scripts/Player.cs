@@ -3,10 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Interface;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
 
 public class Player : MonoBehaviour
 {
     private Direction direction;
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        Entity.ExecuteActionOnInteract(col.gameObject);
+    }
 
     // Use this for initialization
     void Start () {
@@ -29,7 +35,8 @@ public class Player : MonoBehaviour
 	        direction = Direction.RIGHT;
 
         if (Input.GetKeyDown(KeyCode.E))
-	    {
+        {
+            UnityEngine.Debug.Log(Entity.GetObjectAtSpecifiedDirection(transform, direction));
             Entity.ExecuteActionOnInteract(Entity.GetObjectAtSpecifiedDirection(transform, direction));
             
 	    }

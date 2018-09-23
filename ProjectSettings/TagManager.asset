@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - rpgtalk
+  - Door
   layers:
   - Default
   - TransparentFX

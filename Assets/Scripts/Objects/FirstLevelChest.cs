@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using RPGTALK.Helper;
 using UnityEngine;
 
-public class Chest : MonoBehaviour, IInteract, ITalk
+public class FirstLevelChest : MonoBehaviour, IInteract, ITalk
 {
     private bool isTalking = false;
     private RPGTalk talk;
@@ -16,6 +16,9 @@ public class Chest : MonoBehaviour, IInteract, ITalk
 
     public void TryInteract()
     {
+        Weapon w = GameObject.Find("weapon_gun").GetComponent<Weapon>();
+        w.FireRate = 5;
+
         Debug.Log("ChestInteract");
         anim.SetBool("doChestOpening", true);
         Invoke("StopAnim", 1f);
@@ -32,7 +35,7 @@ public class Chest : MonoBehaviour, IInteract, ITalk
     void Start ()
     {
         anim = GetComponent<Animator>();
-        talk = GameObject.FindGameObjectWithTag("rpgtalk").GetComponent<RPGTalk>();
+        talk = GetComponent<RPGTalk>();
         
     }
 	
@@ -45,7 +48,7 @@ public class Chest : MonoBehaviour, IInteract, ITalk
     {
         if (!isTalking)
         {
-            talk.NewTalk("welcome_start", "welcome_end");
+            talk.NewTalk("flevel_start", "flevel_end");
             isTalking = true;
         }
     }

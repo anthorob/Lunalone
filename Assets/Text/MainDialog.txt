@@ -1,7 +1,7 @@
-[title=welcome_start]
-Bienvenue dans le jeu Lunalone!
-sdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-[title=welcome_end]
+[title=flevel_start]
+Votre arme a été améliorée!
+Elle est maintenant rendu automatique!
+[title=flevel_end]
 
 [title=npc1_start]
 Lorem Ipsum Dolor sit amet

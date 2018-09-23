@@ -4,18 +4,5 @@ using UnityEngine;
 
 public class SceneSwitcher : MonoBehaviour {
 
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("Collision");
-    }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
 }
