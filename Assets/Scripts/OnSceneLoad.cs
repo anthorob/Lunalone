@@ -8,10 +8,21 @@ public class OnSceneLoad : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 	    if (StaticVariables.CowboyChapeau)
 	    {
-	        Instantiate(Resources.Load("Player"));
+            Debug.Log("Chapeau");
+	        Instantiate(Resources.Load<GameObject>("Player"));
 	    }
-	}
+	    else
+	    {
+	        Debug.Log("Blondin");
+            Instantiate(Resources.Load<GameObject>("blondin"));
+        }
+
+	    gameObject.AddComponent<CameraController>().entity = GameObject.FindGameObjectWithTag("Player");
+        GameObject.Find("weapon_gun").GetComponent<Weapon>().FireRate = StaticVariables.WeaponDamage;
+    }
 	
+    
 }
