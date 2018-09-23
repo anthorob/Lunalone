@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProjectile : MonoBehaviour {
+public class EnemyProjectile : MonoBehaviour
+{
 
     public float speed = 10;
     private GameObject target;
@@ -18,16 +19,11 @@ public class EnemyProjectile : MonoBehaviour {
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
-        if (transform.position == targetPos)
-            Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision");
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Collision");
-        }
+        Debug.Log("ddddd");
     }
 }

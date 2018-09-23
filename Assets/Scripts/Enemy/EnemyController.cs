@@ -29,7 +29,6 @@ public class EnemyController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Collided with " + collider.gameObject.tag);
         if (collider.CompareTag("Bullet"))
         {
             Destroy(collider.gameObject);
@@ -60,14 +59,12 @@ public class EnemyController : MonoBehaviour {
                 EnemyShoot();
                 timeToFire = Time.time + 1 ;
             }
-
         }
     }
 
     private void EnemyShoot()
     {
         GameObject player = GameObject.Find("Player");
-
         if (player != null)
         {
             GameObject bullet = Instantiate(projectile);
