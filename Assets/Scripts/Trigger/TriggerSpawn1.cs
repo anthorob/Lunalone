@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerSpawn : MonoBehaviour {
+public class TriggerSpawn1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
