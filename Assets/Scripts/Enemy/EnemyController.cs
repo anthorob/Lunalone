@@ -37,10 +37,6 @@ public class EnemyController : MonoBehaviour {
             CheckDeath();
             Debug.Log(Health);
         }
-        if (collider.CompareTag("Player"))
-        {
-            
-        }
     }
     public void CheckDeath()
     {
@@ -61,11 +57,23 @@ public class EnemyController : MonoBehaviour {
         {
             if (Time.time > timeToFire)
             {
-                Vector3 firepoint = new Vector3(transform.position.x + .1f, transform.position.y + 1f);
-                Instantiate(projectile, firepoint, transform.rotation);
-                timeToFire = Time.time + 1;
+                EnemyShoot();
+                timeToFire = Time.time + 1 ;
             }
 
+        }
+    }
+
+    private void EnemyShoot()
+    {
+        GameObject player = GameObject.Find("Player");
+
+        if (player != null)
+        {
+            GameObject bullet = Instantiate(projectile);
+            bullet.transform.position = transform.position;
+            Vector2 direction = player.transform.position - bullet.transform.position;
+            bullet.transform.TransformDirection(direction);
         }
     }
 }
