@@ -3,6 +3,6 @@ Votre arme a été améliorée!
 Elle est maintenant rendu automatique!
 [title=flevel_end]
 
-[title=npc1_start]
-Lorem Ipsum Dolor sit amet
-[title=npc1_end]
+[title=sign1_s]
+Vers la prochaine ville
+[title=sign1_e]

@@ -25,6 +25,6 @@ public class FirstLevelSign : MonoBehaviour, IInteract
 
     public void TryInteract()
     {
-        Debug.Log("Sign");
+        sign.NewTalk("sign1_s", "sign1_e");
     }
 }
