@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BaseChest : MonoBehaviour, IInteract
 {
-    private bool alreadyTaken;
     private Animator anim;
 
 	// Use this for initialization
@@ -32,7 +31,6 @@ public class BaseChest : MonoBehaviour, IInteract
             anim.SetBool("doChestOpening", true);
             Invoke("StopAnim", 1f);
 
-            StaticVariables.CoffreSousSolOuvert = true;
         }
     }
 

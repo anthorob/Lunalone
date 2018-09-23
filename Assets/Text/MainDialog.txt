@@ -6,3 +6,7 @@ Elle est maintenant rendu automatique!
 [title=sign1_s]
 Vers la prochaine ville
 [title=sign1_e]
+
+[title=car_change_s]
+Votre caractère a été changé.
+[title=car_change_e]
