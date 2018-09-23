@@ -8,10 +8,8 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
 
     private Rigidbody2D body;
-    private Transform gun;
     void Start () {
 		body = GetComponent<Rigidbody2D>();
-        gun = transform.GetChild(0);
 	}
 
 	public void FixedUpdate() {
@@ -28,7 +26,7 @@ public class PlayerMovement : MonoBehaviour {
             animator.SetLayerWeight(1, 1);
             Vector2 movement = new Vector2(0, 0);
 
-            if (xInput > 0) // Left up/down movement
+            if (xInput > 0) // Right up/down movement
             {
                 animator.SetFloat("SpeedY", 0);
                 animator.SetFloat("SpeedX", xInput);
@@ -40,8 +38,10 @@ public class PlayerMovement : MonoBehaviour {
                     movement.Set(1, -.5f);
             }
 
-            if (xInput < 0) // Right up/down movement
+            if (xInput < 0) // Left up/down movement
             {
+                //Check rotation of gun sprite
+
                 animator.SetFloat("SpeedY", 0);
                 animator.SetFloat("SpeedX", xInput);
                 if (yInput == 0)

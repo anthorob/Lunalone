@@ -6,17 +6,17 @@ public class Weapon : MonoBehaviour {
 
     public float FireRate;
     public float Damage;
+    public float RotationSpeed = 5f;
     public float timeToSpawnEffect = 0;
     public float effectSpawnRate = 10;
-    public float RotationSpeed = 5f;
     public LayerMask ToHit;
-    public Transform BulletTrail;
+    public GameObject BulletTrail;
 
     private float timeToFire = 0;
     private Transform firepoint;
 
 	void Awake() {
-		firepoint = transform.FindChild("FirePoint");
+		firepoint = transform.FindChild("Firepoint");
 
         if (firepoint == null)
             Debug.Log("No firepoint detected");
@@ -38,33 +38,28 @@ public class Weapon : MonoBehaviour {
         }
     }
 
-    void Shoot() {
+    private void Shoot() {
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePointPosition = new Vector2(firepoint.position.x, firepoint.position.y);
-        RaycastHit2D hit  = Physics2D.Raycast(firePointPosition, mousePosition-firePointPosition, 100, ToHit);
-        Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100);
+        RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition - firePointPosition, 100, ToHit);
+        Debug.DrawLine(firePointPosition, (mousePosition - firePointPosition) * 100);
 
         if (Time.time >= timeToSpawnEffect)
         {
             Effect();
             timeToSpawnEffect = Time.time + 1 / effectSpawnRate;
         }
-
-        if (hit.collider != null) {
-            Debug.DrawLine(firePointPosition, hit.point, Color.red);
-            Debug.Log("We hit " + hit.collider.name + " and did " + Damage + " damage.");
-        }
     }
 
-    void Effect() {
+    private void Effect() {
         Instantiate(BulletTrail, firepoint.position, firepoint.rotation);
     }
 
-    void Orientation()
+    private void Orientation()
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-       Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 270;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, RotationSpeed * Time.deltaTime);
     }
 }
