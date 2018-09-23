@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Assets.Scripts.Interface;
 using UnityEngine;
 
@@ -19,19 +20,19 @@ public class Entity
 
     public static void ExecuteActionOnInteract(GameObject obj)
     {
-        Debug.Log(obj);
-
         if (obj == null)
             return;
 
-        Component[] hits = obj.GetComponents(typeof(IInteract));
+        IInteract[] interacts = obj.GetComponents<IInteract>();
 
-        if (hits.Length == 0)
-            return;
+        if (interacts.Length == 0)
+           return;
 
-        IInteract interact = hits[0] as IInteract;
-        if (interact.IsInteractable())
-            interact.TryInteract();
+        foreach (IInteract interact in interacts)
+        {
+            if (interact.IsInteractable())
+                interact.TryInteract();
+        }
     }
 	
 }
