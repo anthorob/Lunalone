@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  health: 10
   animator: {fileID: 95696940280676612}
 --- !u!114 &114510315733959756
 MonoBehaviour:

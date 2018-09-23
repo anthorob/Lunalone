@@ -18,13 +18,13 @@ public class Projectile : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collider)
-    {
-        if (collider.gameObject.CompareTag("Enemy"))
-        {
-            collider.gameObject.GetComponent<EnemyController>().Health -= 1;
-            collider.gameObject.GetComponent<EnemyController>().CheckDeath();
-            Destroy(gameObject);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collider)
+    //{
+    //    if (collider.gameObject.CompareTag("Enemy"))
+    //    {
+    //        collider.gameObject.GetComponent<EnemyController>().Health -= 1;
+    //        collider.gameObject.GetComponent<EnemyController>().CheckDeath();
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

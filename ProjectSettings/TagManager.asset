@@ -9,6 +9,7 @@ TagManager:
   - rpgtalk
   - Door
   - BtnPlay
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
