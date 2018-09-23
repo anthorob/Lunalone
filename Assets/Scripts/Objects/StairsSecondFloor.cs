@@ -22,7 +22,7 @@ public class StairsSecondFloor : MonoBehaviour, IInteract {
 
     public void TryInteract()
     {
-        SceneManager.LoadScene("loading", LoadSceneMode.Single);
-        SceneManager.LoadScene("sous-sol", LoadSceneMode.Single);
+        
+        SceneManager.LoadScene("HouseUnderground", LoadSceneMode.Single);
     }
 }
