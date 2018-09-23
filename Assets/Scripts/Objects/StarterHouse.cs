@@ -24,7 +24,5 @@ public class StarterHouse : MonoBehaviour, IInteract {
     public void TryInteract()
     {
         SceneManager.LoadScene("HouseInterior", LoadSceneMode.Single);
-
-        
     }
 }
