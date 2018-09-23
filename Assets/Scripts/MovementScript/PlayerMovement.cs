@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed;
+    public int health;
     public Animator animator;
 
     private Rigidbody2D body;
@@ -82,5 +83,22 @@ public class PlayerMovement : MonoBehaviour {
             animator.SetFloat("SpeedY", yInput);
             animator.SetFloat("SpeedX", xInput);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyBullet"))
+        {
+            health--;
+            Destroy(collision.gameObject);
+            CheckDeath();
+        }
+
+    }
+
+    private  void CheckDeath()
+    {
+        if (health == 0)
+            Destroy(gameObject);
     }
 }
