@@ -22,7 +22,7 @@ public class ExitSecondFloor : MonoBehaviour, IInteract {
 
     public void TryInteract()
     {
-        SceneManager.LoadScene("loading", LoadSceneMode.Single);
+        SceneManager.LoadScene("LoadingScreen", LoadSceneMode.Single);
 
         
     }
