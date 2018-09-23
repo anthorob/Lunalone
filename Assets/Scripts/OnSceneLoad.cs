@@ -55,8 +55,8 @@ public class OnSceneLoad : MonoBehaviour {
     {
         if (!StaticVariables.InteriorTextShown)
         {
-            GameObject.Find("TextInterior").GetComponent<RPGTalk>().NewTalk("", "");
-            StaticVariables.InteriorTextShown = true;
+            // GameObject.Find("TextInterior").GetComponent<RPGTalk>().NewTalk("", "");
+            // StaticVariables.InteriorTextShown = true;
         }
     }
 
@@ -72,6 +72,10 @@ public class OnSceneLoad : MonoBehaviour {
             Debug.Log("spawn -2 -33");
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-2, -33);
             RecenterCameraToPlayer();
+
+            GameObject.Find("TextOnSpawn").GetComponent<RPGTalk>().NewTalk("1", "-1");
+
+            StaticVariables.FirstTextShown = true;
         }
     }
 
