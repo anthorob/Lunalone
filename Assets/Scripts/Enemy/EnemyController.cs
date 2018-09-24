@@ -64,7 +64,7 @@ public class EnemyController : MonoBehaviour {
 
     private void EnemyShoot()
     {
-        GameObject player = GameObject.Find("Player");
+        GameObject player = GameObject.Find("Player(Clone)");
         if (player != null)
         {
             GameObject bullet = Instantiate(projectile);

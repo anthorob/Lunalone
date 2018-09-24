@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -99,6 +101,19 @@ public class PlayerMovement : MonoBehaviour {
     private  void CheckDeath()
     {
         if (health == 0)
+        {
+            StaticVariables.CoffreSousSolOuvert = false;
+            StaticVariables.CowboyChapeau = false;
+            StaticVariables.FirstTextShown = false;
+            StaticVariables.FirstWaveCompleted = false;
+            StaticVariables.InteriorTextShown = false;
+            StaticVariables.Level1SpawnEnnemi = false;
+            StaticVariables.WeaponDamage = 0;
+
             Destroy(gameObject);
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+            
+
     }
 }

@@ -29,10 +29,11 @@ public class UndergroundChest : MonoBehaviour, IInteract
         {
             Vector2 position = GameObject.FindGameObjectWithTag("Player").transform.position;
 
+            GameObject.Find("Main Camera").GetComponent<CameraController>().entity = null;
             Destroy(GameObject.FindGameObjectWithTag("Player"));
             Instantiate(Resources.Load("Player"));
             StaticVariables.CowboyChapeau = true;
-            RecenterCameraToPlayer();
+            Invoke("RecenterCameraToPlayer", 2);
 
             talk.NewTalk("car_change_s", "car_change_e");
 
@@ -48,7 +49,8 @@ public class UndergroundChest : MonoBehaviour, IInteract
     void RecenterCameraToPlayer()
     {
         Vector3 pos = GameObject.FindGameObjectWithTag("Player").transform.position;
-        gameObject.GetComponent<Camera>().transform.position = new Vector3(pos.x, pos.y, -10);
+        GameObject.Find("Main Camera").GetComponent<CameraController>().entity = GameObject.FindGameObjectWithTag("Player");
+        gameObject.GetComponentInParent<GameObject>().GetComponent<Camera>().transform.position = new Vector3(pos.x, pos.y, -10);
     }
 
 }
