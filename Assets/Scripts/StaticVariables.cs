@@ -14,5 +14,6 @@ namespace Assets.Scripts
         public static bool InteriorTextShown { get; set; }
         public static bool FirstWaveCompleted { get; set; }
         public static bool FirstTextShown { get; set; }
+        public static bool Level1SpawnEnnemi { get; set; }
     }
 }

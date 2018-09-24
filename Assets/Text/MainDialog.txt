@@ -8,5 +8,6 @@ Vers la prochaine ville
 [title=sign1_e]
 
 [title=car_change_s]
-Votre caractère a été changé.
+Vous retrouvez votre vieux chapeau et votre vieux revolver.
+Vous vous étiez promis de ne jamais les retoucher.
 [title=car_change_e]
